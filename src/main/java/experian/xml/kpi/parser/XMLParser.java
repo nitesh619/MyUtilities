@@ -216,6 +216,7 @@ public class XMLParser {
             Node state = element.getElementsByTagName(XMLKeys.AddKey.STE).item(0);
             Node country = element.getElementsByTagName(XMLKeys.AddKey.CTRY).item(0);
             Node pin = element.getElementsByTagName(XMLKeys.AddKey.PIN).item(0);
+            //System.out.print(street);
 
             if (add != null) {
                 address.setAddress(add.getTextContent());

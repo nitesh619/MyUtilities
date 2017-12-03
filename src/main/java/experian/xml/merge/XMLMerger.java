@@ -28,7 +28,7 @@ public class XMLMerger {
     private int totalXMLCount;
 
     public boolean mergeXMLFiles(File xmlDir) {
-        logger.info("Merge files at: "+xmlDir.getPath());
+        logger.info("Merge files at: " + xmlDir.getPath());
         File[] xmlFiles = xmlDir.listFiles();
         try {
             // Take 1st XML file and start appending nodes to this from others
@@ -87,6 +87,7 @@ public class XMLMerger {
 
     private void writeToMergeXML(Document xml) throws Exception {
         Transformer tf = TransformerFactory.newInstance().newTransformer();
+
         tf.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
         tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         tf.setOutputProperty(OutputKeys.INDENT, "yes");

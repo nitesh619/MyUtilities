@@ -75,7 +75,6 @@ public class KPIAnalysis {
         return true;
     }
 
-
     private List<String> getAllPanNumber() {
         List<String> pan = new ArrayList<>();
         if (submissions != null) {

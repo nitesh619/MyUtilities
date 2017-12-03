@@ -40,5 +40,6 @@ public class XMLKeys {
         String STE = "STE";
         String CTRY = "CTRY";
         String PIN = "PIN";
+        String STREET="STREET";
     }
 }

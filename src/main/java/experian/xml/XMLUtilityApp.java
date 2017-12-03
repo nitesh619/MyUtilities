@@ -99,7 +99,11 @@ public class XMLUtilityApp extends JFrame {
         startButton.addActionListener(evt -> {
             rootLogger.info("Start clicked!!");
             if (isValidXmlDir()) {
-                startOperation((Task) operationsCombo.getSelectedItem());
+                try {
+                    startOperation((Task) operationsCombo.getSelectedItem());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid or empty path!!",
                         APP_NAME, JOptionPane.ERROR_MESSAGE);
@@ -178,7 +182,7 @@ public class XMLUtilityApp extends JFrame {
         }
     }
 
-    private void startOperation(Task task) {
+    private void startOperation(Task task)throws Exception {
         boolean isTaskComplete = false;
         switch (task) {
             case MERGE:
